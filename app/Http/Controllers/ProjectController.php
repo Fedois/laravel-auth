@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Portfolio;
-use App\Http\Requests\StorePortfolioRequest;
-use App\Http\Requests\UpdatePortfolioRequest;
+use App\Models\Project;
+use App\Http\Requests\StoreProjectRequest;
+use App\Http\Requests\UpdateProjectRequest;
 
-class PortfolioController extends Controller
+class ProjectController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class PortfolioController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StorePortfolioRequest  $request
+     * @param  \App\Http\Requests\StoreProjectRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StorePortfolioRequest $request)
+    public function store(StoreProjectRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class PortfolioController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Portfolio  $portfolio
+     * @param  \App\Models\Project  $project
      * @return \Illuminate\Http\Response
      */
-    public function show(Portfolio $portfolio)
+    public function show(Project $project)
     {
         //
     }
@@ -53,10 +53,10 @@ class PortfolioController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Portfolio  $portfolio
+     * @param  \App\Models\Project  $project
      * @return \Illuminate\Http\Response
      */
-    public function edit(Portfolio $portfolio)
+    public function edit(Project $project)
     {
         //
     }
@@ -64,11 +64,11 @@ class PortfolioController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdatePortfolioRequest  $request
-     * @param  \App\Models\Portfolio  $portfolio
+     * @param  \App\Http\Requests\UpdateProjectRequest  $request
+     * @param  \App\Models\Project  $project
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdatePortfolioRequest $request, Portfolio $portfolio)
+    public function update(UpdateProjectRequest $request, Project $project)
     {
         //
     }
@@ -76,10 +76,10 @@ class PortfolioController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Portfolio  $portfolio
+     * @param  \App\Models\Project  $project
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Portfolio $portfolio)
+    public function destroy(Project $project)
     {
         //
     }
