@@ -56,7 +56,7 @@
 
                                 <li class="nav-item m-1">
                                     <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.dashboard' ? 'bg-secondary' : '' }}" href="{{route('admin.dashboard')}}">
-                                        <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i> Portfolio
+                                        <i class="fa-solid fa-file-lines fa-lg fa-fw"></i> Portfolio
                                     </a>
                                 </li>
                             </ul>
