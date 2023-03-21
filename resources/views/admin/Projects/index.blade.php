@@ -10,10 +10,10 @@
 
         <ul class="list-group">
             @foreach ($projects as $project)
-                <li class="my-1 list-group-item">
+                <li class="my-1 list-group-item list-group-item-action">
                     <a href="{{ route('admin.projects.show', $project->id) }}" class="text-dark text-decoration-none">
 
-                        {{ $project->title }}
+                        <span class="me-5">{{ $project->id }}</span>  {{ $project->title }}
 
                     </a>
                 </li>
@@ -21,9 +21,3 @@
         </ul>
     </div>
 @endsection
-
-<style>
-    li a:hover{
-        text-decoration: underline !important;
-    }
-</style>
