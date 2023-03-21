@@ -24,7 +24,7 @@ class StoreProjectRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|unique:projects,title|max:128',
+            'title' => 'required|unique:projects,title|max:50',
             'content' => 'required|max:4096'
         ];
     }

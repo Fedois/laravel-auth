@@ -8,5 +8,7 @@
 
         <h1 class="my-3">{{ $project->title }}</h1>
         <p>{{ $project->content }}</p>
+
+        <a href="{{ route('admin.projects.edit', $project->id) }}" class="btn btn-warning my-1">Modifica</a>
     </div>
 @endsection

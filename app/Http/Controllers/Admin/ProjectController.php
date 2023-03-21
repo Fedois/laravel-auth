@@ -49,7 +49,7 @@ class ProjectController extends Controller
 
         $newProject = Project::create($data);
 
-        return redirect()->route('admin.projects.show', $newProject->id)->with('success', 'progetto aggiunto!');
+        return redirect()->route('admin.projects.show', $newProject->id)->with('success', 'nuovo progetto aggiunto!');
     }
 
     /**
@@ -71,7 +71,7 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        //
+        return view('admin.projects.edit', compact('project'));
     }
 
     /**
@@ -83,7 +83,14 @@ class ProjectController extends Controller
      */
     public function update(UpdateProjectRequest $request, Project $project)
     {
-        //
+        $data = $request->validated();
+
+        $data['slug'] = Str::slug($data['title']);
+
+        $project->update($data);
+
+        return redirect()->route('admin.projects.show', $project->id)->with('success', 'progetto modificato!');
+
     }
 
     /**
