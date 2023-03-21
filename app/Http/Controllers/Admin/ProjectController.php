@@ -9,6 +9,7 @@ use App\Http\Requests\UpdateProjectRequest;
 
 // help
 use illuminate\Support\Str;
+use PhpParser\Node\Stmt\Return_;
 
 class ProjectController extends Controller
 {
@@ -101,6 +102,8 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        //
+        $project->delete();
+
+        return redirect()->route('admin.projects.index')->with('success', 'eliminazione avvenuta!');
     }
 }
