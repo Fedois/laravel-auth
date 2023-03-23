@@ -8,8 +8,9 @@ use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
 
 // help
-use illuminate\Support\Str;
-use PhpParser\Node\Stmt\Return_;
+use Illuminate\Support\Str;
+// use PhpParser\Node\Stmt\Return_;
+use Illuminate\Support\Facades\Storage;
 
 class ProjectController extends Controller
 {
@@ -45,6 +46,11 @@ class ProjectController extends Controller
     public function store(StoreProjectRequest $request)
     {
         $data = $request->validated();
+
+        if(array_key_exists('img', $data)){
+            $imgPath = Storage::put('projects', $data['img']);
+            $data['img'] = $imgPath;
+        }
 
         $data['slug'] = Str::slug($data['title']);
 

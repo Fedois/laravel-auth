@@ -4,7 +4,7 @@
     <div class="container">
         <a href="{{ route('admin.projects.index') }}" class="btn btn-secondary my-1">Torna indietro</a>
 
-            <form action="{{ route('admin.projects.store') }}" method="POST">
+            <form action="{{ route('admin.projects.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                @include('partials.errors')
