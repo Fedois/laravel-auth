@@ -11,12 +11,12 @@
 
                 <div class="my-3">
                     <label for="title" class="form-label">Titolo*</label>
-                    <input type="text" class="form-control" id="title" name="title" placeholder="aggiungi titolo..." value="{{ old('title') }}">
+                    <input required type="text" class="form-control" id="title" name="title" placeholder="aggiungi titolo..." value="{{ old('title') }}">
                 </div>
                 
                 <div class="my-3">
                     <label for="content" class="form-label">Contenuto*</label>
-                    <textarea class="form-control" id="content" name="content" rows="3">{{ old('content') }}</textarea>
+                    <textarea required class="form-control" id="content" name="content" rows="3">{{ old('content') }}</textarea>
                 </div>
 
                 <div class="my-3">

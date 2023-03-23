@@ -6,9 +6,15 @@
 
         @include('partials.success')
 
-        <h1 class="my-3">{{ $project->title }}</h1>
-        <img class="h-50 w-50 mb-3" src="{{ asset('storage/'. $project->img) }}" alt="img">
-        <p>{{ $project->content }}</p>
+        <div class="info">
+            <h1 class="my-3">{{ $project->title }}</h1>
+        
+            @if ($project->img)
+                <img class="h-50 w-50 mb-3" src="{{ asset('storage/'. $project->img) }}" alt="img">  
+            @endif
+            
+            <p>{{ $project->content }}</p>
+        </div>
 
         <a href="{{ route('admin.projects.edit', $project->id) }}" class="btn btn-warning my-1">Modifica</a>
 
