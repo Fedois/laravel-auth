@@ -18,6 +18,11 @@
                     <label for="content" class="form-label">Contenuto*</label>
                     <textarea class="form-control" id="content" name="content" rows="3">{{ old('content') }}</textarea>
                 </div>
+
+                <div class="my-3">
+                    <label for="img" class="form-label">Immagine</label>
+                    <input type="file" class="form-control" id="img" name="img" placeholder="aggiungi immagine..." accept="image/*">
+                </div>
     
                 <button type="submit" class="btn btn-primary">Crea</button>
             </form>
